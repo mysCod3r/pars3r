@@ -2,7 +2,7 @@ import 'package:pars3r/src/models/index.dart';
 
 /// A model that can be parsed from a `String` value.
 class ParsablePrimitiveModel<T extends Object>
-    extends IParsablePrimitiveModel<T> {
+    extends IParsablePrimitiveModel<ParsablePrimitiveModel<T>> {
   /// Creates an instance of `ParsablePrimitiveModel` with the given value.
   const ParsablePrimitiveModel(this.value);
 
@@ -30,46 +30,17 @@ class ParsablePrimitiveModel<T extends Object>
   final T value;
 
   @override
-  int parseInt(String value) {
-    final intValue = int.tryParse(value);
-    if (intValue == null) {
-      throw ArgumentError.value(
-        value,
-        'value',
-        'Cannot parse "$value" as an integer.',
-      );
-    }
-    return intValue;
-  }
-
-  @override
-  bool parseBool(String value) {
-    final lowerCase = value.trim().toLowerCase();
-    final isTrue = lowerCase == 'true' || lowerCase == '1';
-    final isFalse = lowerCase == 'false' || lowerCase == '0';
-    if (!isTrue && !isFalse) {
-      throw ArgumentError.value(
-        value,
-        'value',
-        'Cannot parse "$value" as a boolean.',
-      );
-    }
-    return isTrue;
-  }
-
-  @override
-  double parseDouble(String value) {
-    final doubleValue = double.tryParse(value);
-    if (doubleValue == null) {
-      throw ArgumentError.value(
-        value,
-        'value',
-        'Cannot parse "$value" as a double.',
-      );
-    }
-    return doubleValue;
-  }
-
-  @override
   String toString() => value.toString();
+
+  @override
+  ParsablePrimitiveModel<T> parse(String value) {
+    final parsed = switch (T) {
+      const (String) => value,
+      const (int) => super.parseInt(value),
+      const (bool) => super.parseBool(value),
+      const (double) => super.parseDouble(value),
+      Type() => throw TypeError(),
+    };
+    return ParsablePrimitiveModel(parsed as T);
+  }
 }

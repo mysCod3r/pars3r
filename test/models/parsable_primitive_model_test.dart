@@ -7,43 +7,43 @@ void main() {
       test('should parse a valid string correctly', () {
         const model = ParsablePrimitiveModel<String>('test');
         final result = model.parse('test');
-        expect(result, equals('test'));
+        expect(result.value, equals('test'));
       });
 
       test('should parse a valid integer correctly', () {
         const model = ParsablePrimitiveModel<int>(1);
         final result = model.parse('1');
-        expect(result, equals(1));
+        expect(result.value, equals(1));
       });
 
       test('should parse a valid double correctly', () {
         const model = ParsablePrimitiveModel<double>(1.23);
         final result = model.parse('1.23');
-        expect(result, equals(1.23));
+        expect(result.value, equals(1.23));
       });
 
       test('should parse a valid (false) boolean correctly', () {
         const model = ParsablePrimitiveModel<bool>(false);
         final result = model.parse('false');
-        expect(result, equals(false));
+        expect(result.value, equals(false));
       });
 
       test('should parse a valid (0) boolean correctly', () {
         const model = ParsablePrimitiveModel<bool>(false);
         final result = model.parse('0');
-        expect(result, equals(false));
+        expect(result.value, equals(false));
       });
 
       test('should parse a valid (true) boolean correctly', () {
         const model = ParsablePrimitiveModel<bool>(false);
         final result = model.parse('true');
-        expect(result, equals(true));
+        expect(result.value, equals(true));
       });
 
       test('should parse a valid (1) boolean correctly', () {
         const model = ParsablePrimitiveModel<bool>(false);
         final result = model.parse('1');
-        expect(result, equals(true));
+        expect(result.value, equals(true));
       });
     });
 

@@ -13,19 +13,22 @@ void main() {
 
       test('should return the correct enum value when parsing', () {
         const model = ParsableEnumModel(MockEnum.empty);
-        expect(model.parse('test'), equals(MockEnum.test));
+        final result = model.parse('test');
+        expect(result.value, equals(MockEnum.test));
       });
 
       test('should parse enum value case insensitively', () {
         const model = ParsableEnumModel(MockEnum.empty);
-        expect(model.parse('TEST'), equals(MockEnum.test));
+        final result = model.parse('TEST');
+        expect(result.value, equals(MockEnum.test));
       });
 
       test('should parse all enum values correctly', () {
         const model = ParsableEnumModel(MockEnum.empty);
 
         for (final enumValue in MockEnum.values) {
-          expect(model.parse(enumValue.name), equals(enumValue));
+          final result = model.parse(enumValue.name);
+          expect(result.value, equals(enumValue));
         }
       });
     });

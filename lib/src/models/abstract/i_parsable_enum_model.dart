@@ -1,7 +1,7 @@
 import 'package:pars3r/src/models/index.dart';
 
 /// An interface for models that can be parsed from a `String` value.
-abstract mixin class IParsableEnumModel<T extends IParsableEnum>
+abstract mixin class IParsableEnumModel<T extends Object>
     implements IParsableModel<T> {
   /// Default constructor for `IParsableEnumModel`.
   const IParsableEnumModel();
