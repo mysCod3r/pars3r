@@ -78,7 +78,7 @@ void main() {
 
       test('should throw an error when parsing an invalid type', () {
         expect(
-          () => ParsablePrimitiveModel<DateTime>.empty().parse('invalid'),
+          () => ParsablePrimitiveModel(DateTime.now()).parse('invalid'),
           throwsA(isA<TypeError>()),
         );
       });
