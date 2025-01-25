@@ -69,9 +69,16 @@ void main() {
         expect(() => model.parse('invalid'), throwsArgumentError);
       });
 
-      test('should throw an error when parsing an invalid type', () {
+      test('should throw an error when defining an invalid type', () {
         expect(
           ParsablePrimitiveModel<DateTime>.empty,
+          throwsA(isA<TypeError>()),
+        );
+      });
+
+      test('should throw an error when parsing an invalid type', () {
+        expect(
+          () => ParsablePrimitiveModel<DateTime>.empty().parse('invalid'),
           throwsA(isA<TypeError>()),
         );
       });
