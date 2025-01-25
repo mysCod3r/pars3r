@@ -1,4 +1,3 @@
-/// A Very Good Project created by Very Good CLI.
-library;
-
+export 'src/models/index.dart';
 export 'src/pars3r.dart';
+export 'src/services/index.dart';
