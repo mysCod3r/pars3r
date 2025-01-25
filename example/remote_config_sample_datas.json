@@ -1,0 +1,46 @@
+{
+    "parameters": {
+      "force_update": {
+        "defaultValue": {
+          "value": "{\"version\":\"2.0.1\",\"force_update\":true}"
+        },
+        "valueType": "JSON"
+      },
+      "app_theme": {
+        "defaultValue": {
+          "value": "\"dark\""
+        },
+        "valueType": "STRING"
+      },
+      "welcome_message": {
+        "defaultValue": {
+          "value": "\"Welcome to our app!\""
+        },
+        "valueType": "STRING"
+      },
+      "max_retry_count": {
+        "defaultValue": {
+          "value": "5"
+        },
+        "valueType": "NUMBER"
+      },
+      "is_promo_enabled": {
+        "defaultValue": {
+          "value": "true"
+        },
+        "valueType": "BOOLEAN"
+      },
+      "percentage": {
+        "defaultValue": {
+          "value": "0.75"
+        },
+        "valueType": "NUMBER"
+      },
+      "products": {
+        "defaultValue": {
+          "value": "[{\"id\":1,\"name\":\"Laptop\",\"price\":1200.99,\"inStock\":true},{\"id\":2,\"name\":\"Headphones\",\"price\":99.99,\"inStock\":false},{\"id\":3,\"name\":\"Smartwatch\",\"price\":199.99,\"inStock\":true}]"
+        },
+        "valueType": "JSON"
+      }
+    }
+  }
