@@ -70,8 +70,10 @@ void main() {
       });
 
       test('should throw an error when parsing an invalid type', () {
-        final model = ParsablePrimitiveModel<DateTime>.empty();
-        expect(() => model.parse('invalid'), throwsA(isA<TypeError>()));
+        expect(
+          ParsablePrimitiveModel<DateTime>.empty,
+          throwsA(isA<TypeError>()),
+        );
       });
     });
   });
