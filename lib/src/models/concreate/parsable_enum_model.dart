@@ -2,7 +2,7 @@ import 'package:pars3r/src/models/index.dart';
 
 /// A model that can be parsed from a `String` value.
 class ParsableEnumModel<T extends IParsableEnum> extends IParsableEnumModel<T> {
-  /// Creates an instance of `RemoteConfigEnumModel` with the given enum value.
+  /// Creates an instance of `ParsableEnumModel` with the given enum value.
   const ParsableEnumModel(this.value);
 
   /// The current value of the enum.

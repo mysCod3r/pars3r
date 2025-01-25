@@ -3,7 +3,7 @@ import 'package:pars3r/src/models/index.dart';
 /// A model that can be parsed from a `String` value.
 abstract mixin class IParsablePrimitiveModel<T extends Object>
     implements IParsableModel<T> {
-  /// Creates an instance of `RemoteConfigPrimitiveModel` with the given value.
+  /// Creates an instance of `IParsablePrimitiveModel` with the given value.
   const IParsablePrimitiveModel();
 
   /// Parses a `String` value into an object of type `int`.
