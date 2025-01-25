@@ -2,6 +2,9 @@ import 'package:pars3r/pars3r.dart';
 
 /// A service that interacts with a remote configuration service to fetch
 abstract class IRemoteConfigService {
+  /// Default constructor for `IRemoteConfigService`.
+  const IRemoteConfigService();
+
   /// Initializes the remote configuration service.
   Future<bool> initialize();
 

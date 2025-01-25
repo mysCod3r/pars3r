@@ -1,8 +1,5 @@
 /// An interface for models that can be parsed from a `String` value.
-abstract class IParsableModel<T extends Object> {
-  /// Default constructor for `IParsableModel`.
-  const IParsableModel();
-
+abstract mixin class IParsableModel<T extends Object> {
   /// Parses a `String` value into an object of type `T`.
   ///
   /// This method must be implemented by concrete classes to handle the

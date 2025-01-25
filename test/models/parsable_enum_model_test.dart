@@ -11,6 +11,12 @@ void main() {
         expect(model.value, equals(MockEnum.test));
       });
 
+      test('should return the correct enum value when converting to string',
+          () {
+        const model = ParsableEnumModel(MockEnum.test);
+        expect(model.toString(), equals(MockEnum.test.toString()));
+      });
+
       test('should return the correct enum value when parsing', () {
         const model = ParsableEnumModel(MockEnum.empty);
         final result = model.parse('test');

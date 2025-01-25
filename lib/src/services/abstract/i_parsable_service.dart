@@ -4,9 +4,6 @@ import 'package:pars3r/pars3r.dart';
 
 /// An interface for services that can parse a `String` value into an object.
 abstract mixin class IParsableService {
-  /// Default constructor for `IParsableService`.
-  const IParsableService();
-
   /// Parses a `String` value into an object of type `T`.
   R parser<T extends IParsableModel<T>, R>(T model, String sourceString) {
     if (R == List<T>) {
