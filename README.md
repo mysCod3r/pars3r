@@ -176,11 +176,14 @@ class ForceUpdateModel extends IParsableObjectModel<ForceUpdateModel> {
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
 ## Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue to suggest improvements
+
+## Acknowledgments
+
+I would like to express my gratitude to [VB10](https://github.com/VB10/) for their exceptional work on the [Vexana](https://pub.dev/packages/vexana) package. The structure and functionality provided by Vexana greatly inspired me during the development of this package. Thank you to the Vexana team and community for their contributions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
