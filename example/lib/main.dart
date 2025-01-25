@@ -1,9 +1,9 @@
+import 'package:example/firebase_options.dart';
+import 'package:example/remote_item.dart';
+import 'package:example/remote_source.dart';
+import 'package:example/services/api_remote_config_service.dart';
+import 'package:example/services/index.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_remote_config_example/firebase_options.dart';
-import 'package:firebase_remote_config_example/remote_item.dart';
-import 'package:firebase_remote_config_example/remote_x.dart';
-import 'package:firebase_remote_config_example/services/api_remote_config_service.dart';
-import 'package:firebase_remote_config_example/services/index.dart';
 import 'package:flutter/material.dart';
 
 const _source = RemoteSource.firebase;

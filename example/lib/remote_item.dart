@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, document_ignores
 
-import 'package:firebase_remote_config_example/main.dart';
-import 'package:firebase_remote_config_example/models/index.dart';
-import 'package:firebase_remote_config_example/utils/index.dart';
+import 'package:example/main.dart';
+import 'package:example/models/index.dart';
+import 'package:example/utils/index.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pars3r/pars3r.dart';
 

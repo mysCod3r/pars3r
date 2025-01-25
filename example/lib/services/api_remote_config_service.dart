@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:firebase_remote_config_example/services/index.dart';
+import 'package:example/services/index.dart';
 import 'package:http/http.dart' as http;
 import 'package:pars3r/pars3r.dart';
 

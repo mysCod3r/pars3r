@@ -1,5 +1,5 @@
+import 'package:example/services/index.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:firebase_remote_config_example/services/index.dart';
 import 'package:pars3r/pars3r.dart';
 
 /// A service that interacts with Firebase Remote Config to fetch and parse
