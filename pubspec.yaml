@@ -1,6 +1,17 @@
 name: pars3r
-description: A Very Good Project created by Very Good CLI.
+description: A Dart library for parsing `String` values into various object types with type safety and ease of use.
 version: 0.1.0+1
+homepage: https://github.com/mysCod3r/pars3r
+repository: https://github.com/mysCod3r/pars3r
+issue_tracker: https://github.com/mysCod3r/pars3r/issues
+topics: 
+  - parsing
+  - serialization
+  - model
+  - dart
+  - flutter
+  - utilities
+  - type-safety
 
 
 environment:
