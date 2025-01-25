@@ -42,6 +42,14 @@ final version = service.read<String, String>(
   parseModel: ParsablePrimitiveModel<String>(''),
 );
 print(version); // "1.0.0"
+
+// Below is an example of enum creation.
+final appTheme = service.read<ParsableEnumModel, ParsableEnumModel>(
+  key: 'app_theme', 
+  parseModel: const ParsableEnumModel(AppTheme.system),
+);
+
+print(appTheme.value); // AppTheme.dark
 ````
 
 ### 2. Managing Multiple Remote Items
@@ -102,9 +110,6 @@ final forceUpdate = RemoteItem.forceUpdate.read; // ForceUpdateModel(version: '1
 final products = RemoteItem.products.read; // [ProductModel(name: 'Product 1', price: 100.0)]
 ```
 
----
-
-
 ## Features
 ### Abstract Models
 
@@ -127,7 +132,6 @@ final products = RemoteItem.products.read; // [ProductModel(name: 'Product 1', p
 
 - `IParsableService`: Provides a parsing mechanism for models, supporting single objects and lists.
 
---- 
 
 ## Model Definitions
 
@@ -137,16 +141,17 @@ You can use the ready-made models for `String`, `int`, `double`, and `bool`, or 
 
 ### 2. Enums
 
+First, the enum class to be parsed should inherit from the `IParsableEnum` interface. This interface should include a method that returns all values of the enum class. Then, using the `IParsableEnumModel` class, the enum class can be made parsable.
 
 ```dart
-enum TestEnum with IParsableEnum<TestEnum> { 
-  first, 
-  second, 
-  third,
+enum AppTheme with IParsableEnum<AppTheme> {
+  system,
+  light,
+  dark,
   ;
-
+ 
   @override
-  List<TestEnum> get enumValues => values;
+  List<AppTheme> get enumValues => values;
 }
 ```
 
@@ -173,8 +178,6 @@ class ForceUpdateModel extends IParsableObjectModel<ForceUpdateModel> {
   }
 }
 ```
-
----
 
 ## Contributing
 
