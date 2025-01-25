@@ -18,8 +18,10 @@ void main() {
         const jsonString = '{"id": "p1", "name": "Laptop", "price": 1500.0}';
         const mockProduct = MockProduct.empty();
 
-        final result =
-            service.parser<MockProduct, MockProduct>(mockProduct, jsonString);
+        final result = service.parser<MockProduct, MockProduct>(
+          mockProduct,
+          jsonString,
+        );
 
         expect(result, isA<MockProduct>());
         expect(result.id, equals('p1'));
