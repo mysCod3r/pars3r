@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "283807744839",
+    "project_id": "advanced-remote-config-project",
+    "storage_bucket": "advanced-remote-config-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283807744839:android:2bb956b9d698f194ce8262",
+        "android_client_info": {
+          "package_name": "com.example.firebase_remote_config_example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvj78utxqR35T5BHXRIbsqn0-VixM8pUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283807744839:android:6ba7a29ed596b635ce8262",
+        "android_client_info": {
+          "package_name": "com.example.flutter_advanced_remote_config"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvj78utxqR35T5BHXRIbsqn0-VixM8pUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
